@@ -7,7 +7,7 @@ RUN apt-get update -qq && \
     nodejs \
     python3-full \
     python3-pip \
-    ffmpeg \     # Added ffmpeg here
+    ffmpeg \
     && pip3 install --break-system-packages yt-dlp \
     && rm -rf /var/lib/apt/lists/*
 
