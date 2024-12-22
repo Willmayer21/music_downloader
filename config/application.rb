@@ -38,5 +38,6 @@ module MusicDownloader
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.hosts << "musicdownloader-production.up.railway.app"
   end
 end
