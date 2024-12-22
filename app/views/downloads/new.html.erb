@@ -1,0 +1,16 @@
+<!--/home/will/code/Willmayer21/music_downloader/app/views/downloads/new.html.erb-->
+<div class="container mx-4 my-4">
+<h1 class="text-xl font-bold mb-4">YouTube Music Downloader</h1>
+<% flash.each do |name, msg| %>
+<div class="<%= name == 'notice' ? 'text-green-600' : 'text-red-600' %> mb-4">
+<%= msg %>
+</div>
+<% end %>
+<%= form_with url: downloads_path, data: { turbo: false }, class: 'mb-8' do |form| %>
+<div class="mb-4">
+<%= form.label :youtube_url, "YouTube URL:", class: 'block mb-2' %>
+<%= form.text_field :youtube_url, class: 'w-full p-2 border rounded', placeholder: "Paste YouTube URL here" %>
+</div>
+<%= form.submit "Download", class: 'bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600' %>
+<% end %>
+</div>
